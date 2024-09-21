@@ -24,4 +24,18 @@ print(name + "1")
 name = "my name"
 print(name) 
 
+name = "Hello world!"
+print(name) 
+
+name = 'Hello world!'
+print(name) 
+
+name = """Hello
+world!"""
+print(name) 
+
+name = "Hello\nworld!"
+print(name) 
+
+
 quit()

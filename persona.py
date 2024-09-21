@@ -23,7 +23,7 @@ if personality_choice == 1:
 elif personality_choice == 2:
     print("You're a curious and analytical thinker!")
 else:
-    print("You are " + choices[personality_choice])
+    print("You are " + choices[personality_choice-1])
 
 # Recovery username var
 print("Nice to meet you " + username + "!")

@@ -8,16 +8,16 @@ print("Hello, " + username + "!")
 choices = ["optimistic", "skeptical", "happy", "reserved"]
 while True:
     # Persona
-    print("How would you describe yourself?")
+    print(username + ", How would you describe yourself?")
 
     for i, choice in enumerate(choices):
         print(f"{i+1}. {choice}")
 
     # Wait Reply
     try:
-        personality_choice = int(input("Enter the number of your response: "))
+        personality_choice = int(input(username + " Whats your persona?"))
     except ValueError:
-        print("Invalid input. Please enter a number.")
+        print("Invalid input "+ username + ". Please enter a number.")
         print("")
         continue
 

@@ -37,5 +37,9 @@ print(name)
 name = "Hello\nworld!"
 print(name) 
 
+myname = ""
+myname = 1      # dinamyc type. ok...
+print(str(myname) + "1")
 
 quit()
+

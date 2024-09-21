@@ -11,8 +11,10 @@ print("Which door do you choose?")
 choice = input()
 if choice == "left":
     print("You've chosen the left door. It leads to a bright and sunny day!")
+    exit(0)
 elif choice == "right":
     print("You've chosen the right door. It leads to a scary monster!")
+    exit(0)
 else:
     print("Game Over")
     exit(1)

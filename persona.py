@@ -4,16 +4,30 @@ print("Hellow I`m Python!")
 username = input("What is your name? ")
 print("Hello, " + username + "!")
 
-# Persona
-print("How would you describe yourself?")
-
 # User choices
 choices = ["optimistic", "skeptical", "happy", "reserved"]
-for i, choice in enumerate(choices):
-    print(f"{i+1}. {choice}")
+while True:
+    # Persona
+    print("How would you describe yourself?")
 
-# Wait Reply
-personality_choice = int(input("Enter the number of your response: "))
+    for i, choice in enumerate(choices):
+        print(f"{i+1}. {choice}")
+
+    # Wait Reply
+    try:
+        personality_choice = int(input("Enter the number of your response: "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        print("")
+        continue
+
+    if 1 <= personality_choice <= len(choices):
+        break
+    else:
+        print("Invalid choice. Please try again.")
+        print("")
+
+print("")
 
 # Reply user 
 # with fun message
@@ -21,10 +35,9 @@ personality_choice = int(input("Enter the number of your response: "))
 if personality_choice == 1:
     print("Ah, you're a glass-half-full kind of person! ")
 elif personality_choice == 2:
-    print("You're a curious and analytical thinker!")
+    print("You are a curious thinker!")
 else:
-    print("You are " + choices[personality_choice-1])
+    print("Ah, you're a " + choices[personality_choice-1] + " kind of person! ")
 
-# Recovery username var
 print("Nice to meet you " + username + "!")
 exit(0)

@@ -1,0 +1,117 @@
+# metodos uteis
+curso = "  pYtHon  "
+
+print(curso.strip() + ".")
+print(curso.lstrip() + ".")
+print(curso.rstrip() + ".")
+
+print()
+curso = "pYtHon"
+print(curso)
+print(curso.upper())
+print(curso.lower())
+print(curso.title())
+
+print()
+print(curso.center(15, "#"))
+print(curso.center(15, "."))
+print(curso.center(10))
+
+print(".".join(curso))
+print()
+
+curso = " pYtHon "
+curso = (((".".join(curso.upper()).center(20, "="))).center(30,"-"))
+print(curso)
+
+print()
+
+# interpolacao
+
+nome = "Aluno"
+idade = 30
+profissao = "Developer"
+linguagem = "Python"
+
+output = "Olá, me chamo %s. Tenho %d anos de idade, trabalhando como %s e estou matriculado no curso de %s." % (nome, idade, profissao, linguagem)
+
+print(output)
+print()
+
+output = "Olá, me chamo {}. Tenho {} anos de idade, trabalhando como {} e estou matriculado no curso de {}.".format(nome, idade, profissao, linguagem)
+print(output)
+print()
+
+
+output = "Olá, me chamo {3}. Tenho {2} anos de idade, trabalhando como {1} e estou matriculado no curso de {0}.".format(profissao, nome, idade, linguagem )
+print(output)
+print()
+
+output = "Olá, me chamo {nome}. Tenho {idade} anos de idade, trabalhando como {profissao} e estou matriculado no curso de {linguagem}.".format(nome=nome, idade=idade, profissao=profissao, linguagem=linguagem)
+print(output)
+print()
+
+
+output = f"Olá, me chamo {profissao}. Tenho {idade} anos de idade, trabalhando com {linguagem} e com o {nome}."
+print(output)
+print()
+
+pessoa = {
+    "nome": nome,
+    "profissao": profissao,
+    "idade": idade,
+    "linguagem": linguagem
+}
+
+output = "Olá Pessoa! Me chamo {nome}. Tenho {idade} anos de idade, trabalhando com {linguagem} e com o {profissao}.".format(**pessoa)
+print(output)
+print()
+
+
+# fatiamento
+
+nome = "Insira seu nome completo"
+
+print(nome[0])
+
+print(nome[:9])
+
+print(nome[9:])
+
+print(nome[10:13])
+
+print(nome[2:14:2])
+
+print(nome[:])
+
+print(nome[::-1])
+
+
+# multiplas linhas
+mensagem = f"""
+This is a test message
+with multiple lines
+and variable interpolation
+{nome}
+
+to be continued...
+
+"""
+print(mensagem)
+
+
+mensagem = f'''
+{curso}
+
+  This is a test message
+  with multiple lines
+  and variable interpolation
+  {output}
+
+  to be continued...
+
+============================================
+
+'''
+print(mensagem)
+

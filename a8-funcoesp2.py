@@ -43,3 +43,18 @@ def exibir_resultado(a, b, funcao):
 
 exibir_resultado(20, 15, somar)
 exibir_resultado(20, 15, subtrair)
+
+op = somar
+
+print(op(1,2))
+
+salario = 2000
+
+def salario_bonus(bonus, funcao, exibir):
+    global salario
+    exibir(salario, bonus, funcao)
+    
+
+salario_bonus(500, somar, exibir_resultado)
+salario_bonus(500, subtrair, exibir_resultado)
+

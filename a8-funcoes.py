@@ -16,7 +16,6 @@ exibir_ola()
 # error
 # exibir_mensagem()
 
-
 # functions
 def calcular_total(numeros):
     return (sum(numeros))
